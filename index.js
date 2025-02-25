@@ -30,10 +30,12 @@ function renderGrid (dimension) {
     
     for (let i = 0; i < dimension; i++) {
         gridData.push([]);
+        gridData.push([]);
         const row = document.createElement('tr');
         for (let j = 0; j < dimension; j++) {
             gridData[i].push(EMPTY);
             const cell = document.createElement('td');
+            gridData[i].push(EMPTY);
             cell.textContent = EMPTY;
             cell.addEventListener('click', () => cellClickHandler(gridData, i, j));
             row.appendChild(cell);
